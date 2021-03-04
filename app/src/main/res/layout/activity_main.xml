@@ -11,20 +11,40 @@
     <ImageView
         android:id="@+id/imageV"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:src="@drawable/heart157895x640"
+        tools:layout_editor_absoluteX="-34dp"
+        tools:layout_editor_absoluteY="16dp" />
 
     <TextView
         android:id="@+id/text_hr"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="320sp"
+        android:layout_height="160sp"
+        android:gravity="center"
         android:text="---"
         android:textColor="@color/white"
         android:textSize="80sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintHorizontal_bias="0.573"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.433" />
+        app:layout_constraintVertical_bias="0.446" />
+
+    <TextView
+        android:id="@+id/text_timestamp"
+        android:layout_width="300dp"
+        android:layout_height="99dp"
+        android:gravity="center"
+        android:text=" --:-- "
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.807" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,4 @@
+///////////////////////////////////////////////////////////////////////////////
 package com.ahandyapp.hamappsimple
 
 import android.util.Log
@@ -21,8 +22,14 @@ class HamHttpServer {
     private var hamMessage = HamMessage()
 
     // establish HTTP server for HAM GET & POST
-    fun establishHttpServer(ham_simple_layout: ViewGroup, textHR: TextView) {
-//        fun establishHttpServer(dashboardViewModel: DashboardViewModel) {
+    fun establishHttpServer(ham_simple_layout: ViewGroup) {
+        val textHR: TextView = ham_simple_layout.findViewById(R.id.text_hr)
+        val textTimestamp: TextView = ham_simple_layout.findViewById(R.id.text_timestamp)
+        textHR.setText("???")
+        textTimestamp.setText("xx:yy")
+
+        var toggle = -1
+
         embeddedServer(Netty, 8080) {
             install(ContentNegotiation) {
                 gson {}
@@ -48,7 +55,22 @@ class HamHttpServer {
                     hamMessage = Gson().fromJson<HamMessage>(text, HamMessage::class.java)
                     Log.d(TAG, "JSON timestamp, heartRate -> ${hamMessage.timestamp}, ${hamMessage.heartRate?.get(0)}")
                     // set heart rate view text
-                    textHR.setText(hamMessage.heartRate?.get(0).toString())
+                    var heartRateCount = hamMessage.heartRate?.size
+                    if (heartRateCount != null) {
+                        var offbody = false
+                        for (i in 0..heartRateCount-1) {
+                            if (hamMessage.heartRate?.get(heartRateCount - 1) == 0) offbody = true;
+                        }
+                        if (!offbody) {
+                            textHR.text = hamMessage.heartRate?.get(heartRateCount - 1).toString()
+                        }
+                        else {
+                            textHR.text = "---"
+                        }
+                        Log.d(TAG, "embeddedServer /heartRate count -> $heartRateCount")
+                    }
+                    // set timestamp text
+                    textTimestamp.text = hamMessage.timestamp
                     ham_simple_layout.invalidate()
                 }
             }
