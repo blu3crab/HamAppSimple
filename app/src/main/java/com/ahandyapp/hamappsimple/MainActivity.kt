@@ -1,23 +1,12 @@
+///////////////////////////////////////////////////////////////////////////////
+// MainActivity.kt by M.A.Tucker 01JAN2021
+//
 package com.ahandyapp.hamappsimple
 
-import android.graphics.Bitmap
-import android.graphics.Canvas
-import android.graphics.Color
-import android.graphics.drawable.BitmapDrawable
-import android.graphics.drawable.ShapeDrawable
-import android.graphics.drawable.shapes.OvalShape
-import android.graphics.drawable.shapes.RectShape
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
-import java.text.SimpleDateFormat
-import java.util.*
-import kotlin.concurrent.schedule
-import kotlin.concurrent.scheduleAtFixedRate
 
 class MainActivity : AppCompatActivity() {
     private val TAG = "MainActivity"

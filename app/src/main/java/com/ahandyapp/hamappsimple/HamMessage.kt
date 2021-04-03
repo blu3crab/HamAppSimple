@@ -1,6 +1,7 @@
+///////////////////////////////////////////////////////////////////////////////
+// HamMessage.kt by M.A.Tucker 01JAN2021
 package com.ahandyapp.hamappsimple
 
-import com.google.gson.Gson
 import com.google.gson.annotations.SerializedName
 
 data class HamMessage(
