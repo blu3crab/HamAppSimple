@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.HamAppSimple">
-        <activity android:name="com.ahandyapp.hamappsimple.MainActivity">
+        <activity android:name="com.ahandyapp.hamappsimple.MainActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

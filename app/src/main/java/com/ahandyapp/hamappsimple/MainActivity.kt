@@ -14,6 +14,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.concurrent.schedule
+import kotlin.concurrent.scheduleAtFixedRate
 
 class MainActivity : AppCompatActivity() {
     private val TAG = "MainActivity"
@@ -26,5 +30,17 @@ class MainActivity : AppCompatActivity() {
         // establish HAM HTTP server to rcv HR on POST & send metadata on GET
         val hamHttpServer: HamHttpServer = HamHttpServer()
         hamHttpServer.establishHttpServer(ham_simple_layout)
+
+//        val timer = Timer("stale timer check", true)
+//        timer.schedule(8000) {
+//            val sdf = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
+//            val currentDate = sdf.format(Date())
+//            Log.d(TAG, "=============stale timer check schedule -> $currentDate")
+//        }
+//        timer.scheduleAtFixedRate(8000, 8000) {
+//            val sdf = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
+//            val currentDate = sdf.format(Date())
+//            Log.d(TAG, "=============stale timer check fixed rate -> $currentDate")
+//        }
     }
 }
