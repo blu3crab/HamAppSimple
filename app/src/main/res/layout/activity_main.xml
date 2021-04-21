@@ -23,7 +23,7 @@
         android:gravity="center"
         android:text="---"
         android:textColor="@color/white"
-        android:textSize="80sp"
+        android:textSize="@dimen/hr_textsize_phone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.573"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -33,12 +33,12 @@
 
     <TextView
         android:id="@+id/text_timestamp"
-        android:layout_width="300sp"
+        android:layout_width="400sp"
         android:layout_height="99sp"
         android:gravity="center"
         android:text=" --:-- "
         android:textColor="@color/white"
-        android:textSize="48sp"
+        android:textSize="@dimen/clock_textsize_phone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.552"
