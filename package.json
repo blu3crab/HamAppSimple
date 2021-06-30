@@ -1,0 +1,29 @@
+{
+  "devDependencies": {
+    "@fitbit/sdk": "~5.0.0"
+  },
+  "fitbit": {
+    "appUUID": "ce37f5da-016e-430b-bfc2-a19d3fcaedd7",
+    "appType": "app",
+    "appDisplayName": "SimplyHeart",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#2196f3",
+    "requestedPermissions": [
+      "access_heart_rate",
+      "access_user_profile",
+      "run_background",
+      "access_internet",
+      "access_activity"
+    ],
+    "buildTargets": [
+      "atlas",
+      "vulcan"
+    ],
+    "i18n": {
+      "en-US": {
+        "name": "SimplyHeart"
+      }
+    },
+    "defaultLanguage": "en-US"
+  }
+}
